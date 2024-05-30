@@ -1,0 +1,67 @@
+.iconDescriptionLinks__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  max-width: 380px;
+  margin: auto;
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 100%;
+  }
+
+  @include breakpoint(xxl) {
+    gap: 40px;
+  }
+}
+
+.iconDescriptionLinks__grid--item {
+  background-color: $blue-500;
+  text-align: center;
+  padding: 38px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-600;
+  }
+
+  .title {
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.4;
+    padding-top: 32px;
+    letter-spacing: 1px;
+    color: $white;
+    font-weight: 500;
+  }
+
+  .text {
+    color: $white;
+    padding: 20px 0 30px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    &:hover {
+      background-color: $white;
+      color: $blue-700;
+    }
+  }
+
+  figure {
+    height: 45px;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @include breakpoint(lg) {
+    padding: 30px 20px;
+  }
+
+  @include breakpoint(xxl) {
+    padding: 40px 45px;
+  }
+}

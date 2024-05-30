@@ -1,0 +1,33 @@
+.onlyImage {
+  figure {
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__full {
+    height: 592px;
+  }
+
+  &__contain {
+    height: 400px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    &__full,
+    &__contain {
+      height: inherit;
+    }
+  }
+}

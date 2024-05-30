@@ -1,0 +1,45 @@
+.bigTitleTextButton {
+  text-align: center;
+  // padding-top: 134px;
+
+  .text {
+    color: $grey-400;
+    padding-top: 44px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .btn-blueLight {
+    margin-top: 30px;
+  }
+
+  @include breakpoint(md) {
+    // padding-top: 174px;
+    &.interns {
+      .mediumContainer {
+        width: 60%;
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    // padding-top: 200px;
+
+    .text {
+      padding-top: 37px;
+    }
+
+    .btn-blueLight {
+      margin-top: 50px;
+    }
+  }
+
+  @include breakpoint(xl) {
+    // padding-top: 224px;
+    &.interns {
+      .mediumContainer {
+        max-width: 760px;
+      }
+    }
+  }
+}

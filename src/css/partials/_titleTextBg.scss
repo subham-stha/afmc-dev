@@ -1,0 +1,36 @@
+.titleTextBg {
+  &__content {
+    // width: 75%;
+  }
+
+  .text {
+    color: $grey-400;
+    padding-top: 20px;
+  }
+
+  @include breakpoint(md) {
+    &__content {
+      // width: 100%;
+    }
+
+    &.changeWidth {
+      .container {
+        width: 72%;
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    .text {
+      padding-top: 30px;
+    }
+  }
+
+  @include breakpoint(xl) {
+    &.changeWidth {
+      .container {
+        max-width: 1210px
+      }
+    }
+  }
+}

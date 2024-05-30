@@ -1,0 +1,36 @@
+.introPage {
+  padding-top: 134px;
+  text-align: center;
+
+  @include breakpoint(md) {
+    padding-top: 174px;
+  }
+
+  @include breakpoint(lg) {
+    padding-top: 200px;
+  }
+
+  @include breakpoint(xl) {
+    padding-top: 224px;
+  }
+}
+
+.introPage__content {
+  .text {
+    padding-top: 25px;
+    color: $grey-400;
+  }
+
+  @include breakpoint(md) {
+    width: 50%;
+    margin: auto;
+  }
+
+  @include breakpoint(lg) {
+    max-width: 770px;
+
+    .text {
+      padding-top: 16px;
+    }
+  }
+}

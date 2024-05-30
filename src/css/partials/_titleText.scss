@@ -1,0 +1,62 @@
+.titleText {
+  position: relative;
+  padding: calc(75px + 2vw) 0 0;
+  height: 100%;
+  background-color: $blue-100;
+  @include breakpoint(xxl) {
+    padding: 140px 0 0;
+  }
+}
+
+.titleText__container {
+  background-color: $blue-100;
+  position: relative;
+  left: -100%;
+  width: 100%;
+}
+.titleText__container--inner {
+  background-color: $blue-400;
+  padding: 30px 40px;
+  position: relative;
+  h2 {
+    margin-bottom: calc(23px + 1vw);
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: $blue-700;
+      height: 2px;
+      left: -22px;
+      top: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+    }
+  }
+  p {
+    padding-bottom: 20px;
+  }
+  @include breakpoint(md) {
+    width: 80%;
+    padding: calc(33px + 2vw) calc(40px + 2vw) calc(33px + 2vw) calc(78px + 2vw);
+    h2 {
+      &::before {
+        width: 27px;
+        left: -30px;
+      }
+    }
+  }
+  @include breakpoint(xl) {
+    width: 68%;
+    padding: calc(33px + 2vw) calc(44px + 7.2vw) calc(33px + 2vw) calc(90px + 7.2vw);
+    h2 {
+      &::before {
+        width: 30px;
+        left: -40px;
+      }
+    }
+  }
+  @include breakpoint(xxl) {
+    max-width: 1090px;
+    padding: 60px 143px 60px 187px;
+  }
+}

@@ -1,0 +1,62 @@
+.quoteBlock__text {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  position: relative;
+
+  .uppercase {
+    padding-top: 45px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: relative;
+      width: 53px;
+      height: .5px;
+      background-color: $blue-700;
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -18px;
+    }
+  }
+
+  &::before {
+    content: '“';
+    font-family: $font-main;
+    font-size: 150px;
+    font-weight: 600;
+    color: $blue-700;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include breakpoint(md) {
+    .uppercase {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        position: unset;
+        margin-right: 24px;
+        transform: none;
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    // width: 70%;
+
+    .uppercase {
+      padding-top: 67px;
+    }
+  }
+
+  @include breakpoint(xxl) {
+    width: 100%;
+  }
+}

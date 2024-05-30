@@ -1,0 +1,142 @@
+.gridSlider__grid {
+  padding: 60px 0;
+  position: relative;
+
+  .swiper {
+    height: 800px;
+  }
+
+  &--item {
+    border: 1px solid $blue-700;
+    text-align: center;
+    padding: 20px;
+
+    .title {
+      font-size: 20px;
+      color: $blue-700;
+      margin: 0;
+      letter-spacing: 1px;
+      font-weight: 600;
+      max-width: 310px;
+      margin: auto;
+    }
+
+    .text {
+      font-size: 13px;
+      color: $grey-400;
+      padding: 21px 0;
+      max-width: 310px;
+      margin: auto;
+    }
+
+    .btn {
+
+      &:hover,
+      &:focus {
+        background-color: $white !important;
+        color: $blue-700;
+      }
+
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $blue-600;
+
+      .title,
+      .text {
+        color: $white;
+      }
+
+
+    }
+  }
+
+  &--arrows {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .swiper-button-prev {
+
+      &::after {
+        background-image: url(../assets/arrowLeft.svg);
+      }
+    }
+
+    .swiper-button-next {
+
+      &::after {
+        background-image: url(../assets/arrowRight.svg);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    &--arrows {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+
+      .swiper-button-prev {
+        top: 40px;
+      }
+
+      .swiper-button-next {
+        bottom: 30px;
+        top: unset;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    padding: 0 50px;
+
+    .swiper {
+      height: inherit;
+    }
+  }
+
+  @include breakpoint(lg) {
+    padding: 0 70px;
+
+    &--item {
+      padding: 38px 20px;
+    }
+  }
+}
+
+.js-swiperGridVertical {
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.js-swiperGridHorizontal {
+  display: none;
+
+  @include breakpoint(md) {
+    display: block;
+  }
+}

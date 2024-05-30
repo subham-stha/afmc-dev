@@ -1,0 +1,49 @@
+.textButtonGrayBlock {
+  background-color: $grey-100;
+  padding: 50px 0;
+
+  .row {
+    flex-wrap: wrap-reverse;
+  }
+
+  @include breakpoint(lg) {
+    padding: 70px 0;
+  }
+
+  @include breakpoint(xxl) {
+    padding: 100px 0;
+  }
+}
+
+.textButtonGrayBlock__text {
+  width: 90%;
+
+  .text {
+    padding: 20px 0;
+    color: $grey-400;
+  }
+
+  @include breakpoint(md) {
+    width: 100%;
+  }
+
+  @include breakpoint(lg) {
+    .text {
+      padding: 35px 0;
+    }
+  }
+}
+
+.textButtonGrayBlock__image {
+  padding-bottom: 55px;
+
+  @include breakpoint(md) {
+    padding-bottom: 0;
+    width: 95%;
+    margin-left: auto;
+  }
+
+  @include breakpoint(lg) {
+    width: 90%;
+  }
+}

@@ -1,0 +1,38 @@
+.introSection {
+  padding-top: 134px;
+  text-align: center;
+
+  @include breakpoint(md) {
+    padding-top: 174px;
+  }
+
+  @include breakpoint(lg) {
+    padding-top: 200px;
+  }
+
+  @include breakpoint(xl) {
+    padding-top: 224px;
+  }
+}
+
+.introSection__content {
+  .uppercase {
+    padding-bottom: 30px;
+  }
+
+  .btn-blueMedium {
+    margin-top: 20px;
+  }
+
+  @include breakpoint(md) {
+    // width: 50%;
+    margin: auto;
+  }
+
+  @include breakpoint(lg) {
+    // max-width: 770px;
+    .btn-blueMedium {
+      margin-top: 50px;
+    }
+  }
+}

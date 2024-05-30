@@ -1,0 +1,34 @@
+.iconLinks__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+}
+
+.iconLinks__grid--item {
+  text-align: center;
+  width: 220px;
+
+  figure {
+    height: 65px;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .title {
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.4;
+    padding: 22px 0;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  @include breakpoint(md) {
+    .title {
+      padding: 18px 0;
+    }
+  }
+}

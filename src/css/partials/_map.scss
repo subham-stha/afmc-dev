@@ -1,0 +1,337 @@
+.map {
+  @include breakpoint(md) {
+    .borderMap {
+      border-right: 1px solid $blue-100;
+    }
+  }
+}
+
+// MAP STYLES //////
+.map__svg {
+  display: none;
+
+  svg {
+    width: 100%;
+  }
+
+  path:hover {
+    fill: $blue-600 !important;
+    cursor: pointer;
+    opacity: .7 !important;
+  }
+
+  #info-box {
+    font-size: clamp(12px, .5vw, 13px);
+    font-weight: 400;
+    letter-spacing: .62px;
+    color: $blue-600;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: $white;
+    border: 2px solid $blue-600;
+    padding: 8px;
+    font-family: arial;
+  }
+
+  @include breakpoint(md) {
+    display: block;
+    padding-right: 30px;
+  }
+
+  @include breakpoint(lg) {
+    padding-right: 50px;
+  }
+
+  @include breakpoint(xl) {
+    padding-right: 65px;
+  }
+
+  @include breakpoint(xxl) {
+    padding-right: 80px;
+  }
+}
+
+// DROPDOWN STYLES //////
+.map__dropdown {
+  .dropdown-container {
+    font-size: clamp(13px, 1.2vw, 22px);
+    transition: all 0.5s ease;
+    position: relative;
+    height: 100%;
+    text-align: left;
+    margin-right: 16px;
+
+    .select {
+      cursor: pointer;
+      display: block;
+      position: relative;
+      padding: 6px 0;
+      background-color: $blue-100;
+
+      .unselected,
+      .selected {
+        width: 100%;
+        display: block;
+        line-height: 1.2;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 0.55px;
+        font-weight: 600;
+
+        &::after {
+          content: "";
+          background-image: url(../assets/menu-arrowBlue.svg);
+          width: 9px;
+          height: 9px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: relative;
+          right: -5px;
+          top: 2px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      position: relative;
+      overflow: hidden;
+      display: none;
+      overflow-y: auto;
+      z-index: 9;
+      line-height: 1.2;
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      height: 74px;
+
+      li {
+        font-size: 11px;
+        letter-spacing: .55px;
+        padding: 5px 0;
+        transition: all 0.2s ease-in-out;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        text-align: center;
+        color: $blue-400;
+        border-bottom: 1px solid $blue-400;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 0 !important;
+        background-color: $grey-100 !important;
+        -webkit-box-shadow: none !important;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $blue-600;
+        border-radius: 0;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+// RESULTS STYLES //////
+.js-stateResult {
+  display: none;
+}
+
+.map__results {
+  padding-top: 105px;
+
+  &--title {
+    font-size: 25px;
+    letter-spacing: 1.25px;
+    line-height: 1;
+    color: $blue-600;
+    border-bottom: 1px solid $blue-600;
+    padding-left: 9px;
+    padding-bottom: 6px;
+    margin-right: 16px;
+  }
+
+  &--list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 300px;
+    overflow: auto;
+    padding-right: 15px;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 0 !important;
+      background-color: $grey-100 !important;
+      -webkit-box-shadow: none !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $blue-600;
+      border-radius: 0;
+    }
+
+    &::-webkit-scrollbar {
+      width: 16px !important;
+    }
+
+    .item-content {
+      justify-content: space-between;
+      display: flex;
+      border-bottom: 1px solid $blue-400;
+      padding: 5px 9px;
+
+      p {
+        font-size: 11px;
+        color: $blue-400;
+      }
+
+      .links {
+        display: none;
+
+        .download {
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $blue-600;
+
+        p {
+          color: $white;
+          font-weight: 600;
+        }
+
+        .links {
+          display: flex;
+          gap: 12px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    padding-left: 30px;
+    padding-top: 0;
+
+    &--list {
+      height: 200px;
+    }
+  }
+
+  @include breakpoint(lg) {
+    padding-left: 50px;
+
+    &--list {
+      height: 300px;
+    }
+  }
+
+  @include breakpoint(xl) {
+    padding-left: 65px;
+  }
+
+  @include breakpoint(xxl) {
+    padding-left: 80px;
+  }
+}
+
+//LIGHTBOX STYLES ////
+.lightbox {
+
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  height: 0;
+  display: none;
+  transition: .3s ease;
+  margin: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $blue-700;
+    mix-blend-mode: multiply;
+    opacity: .9;
+  }
+
+  @include breakpoint(md) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.open-lightbox {
+  .lightbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+.lightbox__button {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+
+  & button {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    font-size: 30px;
+    color: $blue-700;
+  }
+
+  @include breakpoint(lg) {
+    & button {
+      right: 20px;
+      top: 20px;
+    }
+  }
+}
+
+.lightbox__container {
+  position: relative;
+  background-color: $white;
+  width: 90%;
+  height: 90%;
+  border-radius: 20px;
+
+  @include breakpoint(md) {
+    width: 80%;
+    height: 80%
+  }
+}
+
+.lightbox__content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}

@@ -1,0 +1,258 @@
+*
+    font-family: $font-main
+    box-sizing: border-box
+
+:focus
+    box-shadow: none
+    outline: none
+
+.no-js :focus, .keyboard-focus :focus
+    box-shadow: 0 0 2px 1px #00cdcb
+
+body
+    font-family: $font-main
+    line-height: 1.2
+    font-size: 16px
+    color: $black
+    position: relative
+
+    &.hidde
+        overflow: hidden
+
+.site
+    position: relative
+    min-height: 100vh
+    padding-bottom: 266px
+    // line-height: 0
+    @include breakpoint(lg)
+        padding-bottom: 104px
+
+a
+    transition: .3s ease
+    display: inline-block
+
+figure
+    margin: 0
+    line-height: 0
+
+p:empty
+    display: none
+
+.post, .page, .page-content, .entry-content, .entry-summary
+    margin: 0
+    overflow-x: hidden
+
+.content-area
+    overflow: hidden
+
+////////////////////////
+// TITLES
+///////////////////////
+
+.heading
+    margin: 0
+    line-height: 1
+    font-weight: 500
+    &.uppercase
+        font-size: clamp(11px, 1vw, 13px)
+        font-family: $font-main
+        letter-spacing: clamp(1.1px, 1vw, 1.3px)
+        text-transform: uppercase
+        color: $blue-700
+        font-weight: 600
+        line-height: 1.4
+    &.medium
+        font-size: clamp(17px, 1.7vw, 28px)
+        font-family: $font-main
+        letter-spacing: clamp(0.85px, 3vw, 1.25px)
+        color: $blue-700
+        line-height: 1.35
+        font-weight: 600
+    &.big
+        font-family: $font-secondary
+        color: $blue-700
+        font-size: clamp(35px, 4.1vw, 70px)
+        line-height: 1
+    &.bigSection
+        font-family: $font-secondary
+        color: $blue-700
+        font-size: clamp(35px,4.5vw,90px)
+        line-height: 1
+
+.subheading
+    margin: 0
+    font-size: clamp(17px, 1.2vw, 22px)
+    font-weight: 600
+    letter-spacing: 3.4px
+
+////////////////////////
+// TEXT BLOCKS
+///////////////////////
+
+p.text, .text p, .text, p
+    font-family: $font-main
+    margin: 0
+    font-weight: 300
+    letter-spacing: 0.62px
+    font-size: clamp(12px, 1vw, 16px)
+    line-height: 2
+    & *
+        font-family: $font-main
+    strong, b
+        font-weight: bold
+    a
+        color: inherit
+    ol, ul
+        padding-left: 20px
+        margin: 0
+        font-size: clamp(12px, 1vw, 16px)
+        li
+            margin-bottom: 5px
+
+////////////////////////
+// BUTTONS
+///////////////////////
+
+.btn-blueMedium
+    font-family: $font-main
+    font-weight: 600
+    cursor: pointer
+    font-size: 13px
+    color: $white
+    padding: 10px 22px
+    background-color: $blue-400
+    text-decoration: none
+    letter-spacing: 0.65px
+    &:hover, &:focus
+        background-color: $blue-700
+
+.btn-blueLight
+    font-family: $font-main
+    font-weight: 600
+    cursor: pointer
+    font-size: 13px
+    color: $blue-700
+    padding: 10px 22px
+    background-color: $blue-100
+    text-decoration: none
+    letter-spacing: 0.65px
+    &:hover, &:focus
+        background-color: $blue-700
+        color: $white
+
+.btn-dark
+    font-family: $font-main
+    font-weight: 600
+    cursor: pointer
+    font-size: clamp(13px, .9vw, 17px)
+    color: $blue-100
+    padding: 10px 14px
+    background-color: $blue-700
+    text-decoration: none
+    letter-spacing: 0.65px
+    &:hover, &:focus
+        background-color: $white
+        color: $blue-700
+
+////////////////////////
+// Helpers
+///////////////////////
+.text-center
+    text-align: center
+
+.color-white
+    color: $white
+
+.color-dark
+    color: $blue-700
+
+//////////////////////
+// Scrollbar
+/////////////////////    
+::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+    border-radius: 10px
+    background-color: #F5F5F5
+
+::-webkit-scrollbar
+    width: 6px
+    background-color: #F5F5F5
+
+::-webkit-scrollbar-thumb
+    border-radius: 10px
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+    background-color: $black
+
+//////////////////
+//bootstrap container
+//////////////////
+.container
+    &.mediumContainer
+        width: 80%
+    @include breakpoint(md)
+        width: 90%
+        &.mediumContainer
+            // width: 72%
+    @include breakpoint(xl)
+        max-width: 1194px
+        // &.mediumContainer
+        //     max-width: 1210px
+    @include breakpoint(xxl)
+        max-width: 1380px
+
+///////////////////////
+//custom paddings /////
+//////////////////////
+.custom-paddings
+    padding-top: var(--data-pt-mobile)
+    padding-bottom: var(--data-pb-mobile)
+    @include breakpoint(lg)
+        padding-top: var(--data-pt-desktop)
+        padding-bottom: var(--data-pb-desktop)
+
+///////////////////////
+// animation styles
+//////////////////////
+
+.js-parallax-container
+    position: relative
+
+.js-parallax-item
+    position: absolute
+    overflow: hidden
+
+.revealFigureHero
+    visibility: hidden
+    overflow: hidden
+
+//entry animation
+.js-entryAnimation
+    opacity: 0
+    transform: translateY(10px)
+
+.js-fadeUpAnimation-item
+    opacity: 0
+    transform: translateY(50px)
+
+.animTitle-words div
+    font-family: $font-secondary
+
+.animTitleSm-words div
+    font-family: $font-main
+
+.animText-words
+    overflow: hidden
+    p
+        padding-bottom: 2em
+        overflow: hidden
+    div
+        font-family: $font-main
+        bottom: 0
+
+.imageContainer
+    overflow: hidden
+
+.imageEl
+    display: flex
+    position: relative
+    transform: translate(0px, 20px)

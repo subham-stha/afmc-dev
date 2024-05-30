@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="209" height="209" viewBox="0 0 209 209">
+  <g id="Grupo_73" data-name="Grupo 73" transform="translate(-588 -823)">
+    <g id="Grupo_72" data-name="Grupo 72">
+      <path id="Polígono_1" data-name="Polígono 1" d="M10,0,20,17H0Z" transform="translate(706 918) rotate(90)" fill="#fff"/>
+      <g id="Grupo_71" data-name="Grupo 71">
+        <g id="Elipse_3" data-name="Elipse 3" transform="translate(734 886) rotate(90)" fill="none" stroke="#fff" stroke-width="0.5">
+          <circle cx="41.5" cy="41.5" r="41.5" stroke="none"/>
+          <circle cx="41.5" cy="41.5" r="41.25" fill="none"/>
+        </g>
+        <g id="Elipse_4" data-name="Elipse 4" transform="translate(797 823) rotate(90)" fill="none" stroke="#fff" stroke-width="0.5">
+          <circle cx="104.5" cy="104.5" r="104.5" stroke="none"/>
+          <circle cx="104.5" cy="104.5" r="104.25" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

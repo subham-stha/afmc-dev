@@ -25,9 +25,7 @@ get_header();
 		<li><a class="p-1 rounded" href="#sec5">A Growing field</a></li>
 		<li><a class="p-1 rounded" href="#sec6">Conclusion</a></li>
 	</ul>
-	
-      
-    </div>
+	</div>
   </div>
   <div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">

@@ -970,6 +970,9 @@ textarea {
   padding: 0;
   box-sizing: border-box;
 }
+body p, .btn{
+  font-weight: 400;
+}
 
 .section-block {
   padding-block: 60px;
@@ -1070,6 +1073,7 @@ textarea {
   margin-block: 20px;
   border-radius: 4px !important;
   transition: all 0.3s ease;
+  padding: 10px 22px;
 }
 
 .btn:hover {
@@ -1144,6 +1148,7 @@ textarea {
   font-size: 10px;
   line-height: 10px;
   color: #aeaeae;
+  font-weight: 400;
 }
 
 .latest-article .title {
@@ -1157,12 +1162,14 @@ textarea {
   font-size: 13px;
   line-height: 13px;
   color: #000000;
+  font-weight: 400;
 }
 
 .rm-articles-subtitle {
   font-size: 16px;
   line-height: 20px;
   margin-block: 16px;
+  font-weight: 400;
 }
 
 /* Blog sidebar scroll nav */

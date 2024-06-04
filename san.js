@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function($) {
   // ADDING DATA
   (function () {
     var inc = 0;

@@ -1024,7 +1024,7 @@ textarea {
   padding: 10px 15px;
 }
 
-#simple-list-example a {
+.sticky-top.sidebar li a {
   font-size: 12px;
   line-height: 22px;
   text-decoration: none;
@@ -1199,4 +1199,66 @@ textarea {
   .hero-section .btn {
     font-size: 20px;
   }
+}
+
+/* Blog sidebar scroll nav */
+html{
+  scroll-behavior: smooth;
+}
+
+/* MENU START HERE */
+
+.current{
+  font-weight: 500;
+  color: rgba(33,28,25,1)!important;
+}
+
+.sticky-top.sidebar{
+  position: fixed;
+  top: 50%;
+  left: 75px;
+  transform: translateY(-50%);
+}
+
+.sticky-top.sidebar ul{
+  list-style: none;
+  height: 200px;
+  /*width: 80px;*/
+  display: flex;
+  align-items: left;
+  justify-content: space-around;
+  flex-flow: column;
+  position: relative;
+}
+
+.sticky-top.sidebar ul li{
+  z-index: 1;
+}
+
+.sticky-top.sidebar ul li a{
+  
+  text-decoration: none;
+  width: 100%;
+  font-weight: 500;
+  /*background: white;*/
+  color: rgba(33,28,25,0.6);
+  /*border: 1px solid #211C19;
+  border-radius: 12px;
+  padding: 8px;*/
+  letter-spacing: 1px;
+}
+
+.sticky-top.sidebar ul li a:hover{
+  color: rgba(33,28,25,1);
+}
+
+ul .sideline{
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  height: 0px;
+  width: 4px;
+  background: #514A46;
+  border-radius: 20px;
+  left: -25px;
 }

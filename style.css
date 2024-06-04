@@ -1180,8 +1180,8 @@ textarea {
 
 @media (max-width: 768px) {
   .hero-section .hero-content h1 {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 36px;
+    line-height: 36px;
   }
   .hero-section .hero-content p {
     font-size: 16px;
@@ -1193,20 +1193,27 @@ textarea {
     left: 20%;
   }
   .hero-section .hero-content h1 span {
-    display: inline-block;
+    display: inline;
   }
   .hero-section .hero-content p span {
-    display: inline-block;
-  }
-  .hero-section .latest-article p {
-    font-size: 18px;
-    line-height: 18px;
+    display: inline;
   }
   .hero-section .rm-articles h3 {
     font-size: 20px;
   }
   .hero-section .btn {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .latest-article-content p.article-by {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  .hero-section .latest-article p {
+    font-size: 18px;
+    line-height: 18px;
   }
 }
 

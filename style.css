@@ -1107,6 +1107,15 @@ textarea {
   position: relative;
 }
 
+.hero-section .img-holder::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #192a388c;
+}
 .hero-section .img-holder .hero-content {
   position: absolute;
   top: 40%;
@@ -1125,7 +1134,7 @@ textarea {
 
 .hero-section .hero-content p {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 22px;
   color: #ffffff;
 }
 
@@ -1171,12 +1180,12 @@ textarea {
 
 @media (max-width: 768px) {
   .hero-section .hero-content h1 {
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 24px;
   }
   .hero-section .hero-content p {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 16px;
   }
   .hero-section .img-holder .hero-content {
     position: absolute;
@@ -1202,25 +1211,25 @@ textarea {
 }
 
 /* Blog sidebar scroll nav */
-html{
+html {
   scroll-behavior: smooth;
 }
 
 /* MENU START HERE */
 
-.current{
+.current {
   font-weight: 500;
-  color: rgba(33,28,25,1)!important;
+  color: rgba(33, 28, 25, 1) !important;
 }
 
-.sticky-top.sidebar{
+.sticky-top.sidebar {
   position: fixed;
   top: 50%;
   left: 75px;
   transform: translateY(-50%);
 }
 
-.sticky-top.sidebar ul{
+.sticky-top.sidebar ul {
   list-style: none;
   height: 200px;
   /*width: 80px;*/
@@ -1231,34 +1240,33 @@ html{
   position: relative;
 }
 
-.sticky-top.sidebar ul li{
+.sticky-top.sidebar ul li {
   z-index: 1;
 }
 
-.sticky-top.sidebar ul li a{
-  
+.sticky-top.sidebar ul li a {
   text-decoration: none;
   width: 100%;
   font-weight: 500;
   /*background: white;*/
-  color: rgba(33,28,25,0.6);
+  color: rgba(33, 28, 25, 0.6);
   /*border: 1px solid #211C19;
   border-radius: 12px;
   padding: 8px;*/
   letter-spacing: 1px;
 }
 
-.sticky-top.sidebar ul li a:hover{
-  color: rgba(33,28,25,1);
+.sticky-top.sidebar ul li a:hover {
+  color: rgba(33, 28, 25, 1);
 }
 
-ul .sideline{
+ul .sideline {
   position: absolute;
   top: 10px;
   left: 25px;
   height: 0px;
   width: 4px;
-  background: #514A46;
+  background: #514a46;
   border-radius: 20px;
   left: -25px;
 }

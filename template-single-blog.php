@@ -6,7 +6,7 @@ get_header();
 	<main id="primary" class="site-main container">
 <div class="section-block"></div>
 <i class="bi bi-chevron-left"></i>Back
-   <div class="title-block">
+   <div class="title-block e5">
 	<button class='btn'>Informational</button>
 	<h1>The Importance of FMC's</h1>
 	<p>29 April 2024 <i class="bi bi-dot"></i> 08:02 AM</p>

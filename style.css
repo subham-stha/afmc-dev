@@ -1064,7 +1064,10 @@ body p, .btn{
   font-size: 13px;
   line-height: 13px;
 }
-
+header.blueBg {
+  background-color: #192a38;
+  padding-bottom: 20px;
+}
 .btn {
   font-size: 13px;
   line-height: 13px;

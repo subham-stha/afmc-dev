@@ -30,7 +30,6 @@ get_header();
     </div>
   </div>
   <div class="col-8">
-	<h1>test</h1>
     <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
 	<p>In the bustling world of healthcare, there's an often-overlooked group of professionals whose work plays a critical role in understanding and analyzing complex medical events: forensic medical coders. While most people are familiar with medical coders in a clinical setting, forensic medical coders operate in a different arena, often working with law enforcement, insurance companies, and legal teams. Let's dive into their world to understand what they do and why their work is so important.</p>
       <h4 id="sec1">What Are Forensic Medical Coders?</h4>

@@ -12,7 +12,7 @@ get_header();
    </div>
    <div class="mx-auto py-4"><img src="<?php echo get_template_directory_uri();?>/assets/img/mg.png" alt=""></div>
 	<div class="row">
-  <div class="col-4">
+  <div class="col-4 col-md-5 d-none d-md-block">
     <div class="d-flex flex-column gap-2  text-left sticky-top sidebar">
 	<ul>
 		<span class="sideline"></span>
@@ -25,7 +25,7 @@ get_header();
 	</ul>
 	</div>
   </div>
-  <div class="col-8">
+  <div class="col-lg-8 col-md-7 col-xs-12">
     <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
 	<p>In the bustling world of healthcare, there's an often-overlooked group of professionals whose work plays a critical role in understanding and analyzing complex medical events: forensic medical coders. While most people are familiar with medical coders in a clinical setting, forensic medical coders operate in a different arena, often working with law enforcement, insurance companies, and legal teams. Let's dive into their world to understand what they do and why their work is so important.</p>
       <h4 id="sec1">What Are Forensic Medical Coders?</h4>

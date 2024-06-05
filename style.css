@@ -964,11 +964,14 @@ textarea {
   margin-bottom: 1.5em;
 }
 
-/* My Own CSS */
+/* NightShade CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body p, .btn{
+  font-weight: 400;
 }
 
 .section-block {
@@ -996,19 +999,6 @@ textarea {
   line-height: 32px;
 }
 
-@media (max-width: 678px) {
-  .title-block h1 {
-    font-size: 38px;
-    line-height: 38px;
-  }
-  .title-block p {
-    font-size: 18px;
-  }
-
-  .title-block .btn {
-    font-size: 18px;
-  }
-}
 
 .title-block p {
   font-size: 13px;
@@ -1074,7 +1064,10 @@ textarea {
   font-size: 13px;
   line-height: 13px;
 }
-
+header.blueBg {
+  background-color: #192a38;
+  padding-bottom: 20px;
+}
 .btn {
   font-size: 13px;
   line-height: 13px;
@@ -1083,6 +1076,7 @@ textarea {
   margin-block: 20px;
   border-radius: 4px !important;
   transition: all 0.3s ease;
+  padding: 10px 22px;
 }
 
 .btn:hover {
@@ -1157,6 +1151,7 @@ textarea {
   font-size: 10px;
   line-height: 10px;
   color: #aeaeae;
+  font-weight: 400;
 }
 
 .latest-article .title {
@@ -1170,51 +1165,14 @@ textarea {
   font-size: 13px;
   line-height: 13px;
   color: #000000;
+  font-weight: 400;
 }
 
 .rm-articles-subtitle {
   font-size: 16px;
   line-height: 20px;
   margin-block: 16px;
-}
-
-@media (max-width: 768px) {
-  .hero-section .hero-content h1 {
-    font-size: 36px;
-    line-height: 36px;
-  }
-  .hero-section .hero-content p {
-    font-size: 16px;
-    line-height: 16px;
-  }
-  .hero-section .img-holder .hero-content {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-  }
-  .hero-section .hero-content h1 span {
-    display: inline;
-  }
-  .hero-section .hero-content p span {
-    display: inline;
-  }
-  .hero-section .rm-articles h3 {
-    font-size: 20px;
-  }
-  .hero-section .btn {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 991px) {
-  .latest-article-content p.article-by {
-    margin-top: 8px;
-    font-size: 16px;
-  }
-  .hero-section .latest-article p {
-    font-size: 18px;
-    line-height: 18px;
-  }
+  font-weight: 400;
 }
 
 /* Blog sidebar scroll nav */

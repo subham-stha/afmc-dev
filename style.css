@@ -1010,6 +1010,7 @@ body p, .btn{
 .title-block .btn {
   background: #dadada;
   color: #ffffff;
+  border: transparent;
   border-radius: 20px !important;
   padding: 10px 15px;
 }

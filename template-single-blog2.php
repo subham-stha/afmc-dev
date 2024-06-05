@@ -5,7 +5,7 @@ get_header();
 <main id="primary" class="site-main">
     <section class="hero-section">
         <div class="img-holder">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/banner.png" alt="" class="img-fluid">
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/banner.png" alt="" class="img-fluid mx-auto d-block">
             <div class="hero-content d-sm-block">
                 <h1>Insights, work approaches, <span>ideas. Read it all.</span></h1>
                 <p>The <strong>AFMC Blog</strong> contains insightful articles aiming to educate people on the usefulness <span>of forensic medical coders.</span> </p>

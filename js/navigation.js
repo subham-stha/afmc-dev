@@ -111,20 +111,22 @@ function throttle(fn, wait) {
   }
   
   function scroll_cb() {
-	var scroll = $(window).scrollTop();
+	var scroll = jQuery(window).scrollTop();
 	var addClassOnScroll = function () {
-	  var windowTop = $(window).scrollTop();
-	  $("section[id]").each(function (index, elem) {
-		var offsetTop = $(elem).offset().top;
-		var outerHeight = $(this).outerHeight(true);
+		console.log('add on scroll is working')
+	  var windowTop = jQuery(window).scrollTop();
+	  jQuery(".scrollspy-example h4[id]").each(function (index, elem) {
+		var offsetTop = jQuery(elem).offset().top;
+		var outerHeight = jQuery(this).outerHeight(true);
   
-		if (windowTop > offsetTop - 50 && windowTop < offsetTop + outerHeight) {
-		  var elemId = $(elem).attr("id");
-		  $(".progress ul li a.current").removeClass("current");
-		  $(".progress ul li a[href='#" + elemId + "']").addClass("current");
+		if (windowTop > offsetTop - 20 && windowTop < offsetTop + outerHeight) {
+		  var elemId = jQuery(elem).attr("id");
+		  jQuery(".sticky-top.sidebar ul li a.current").removeClass("current");
+		  jQuery(".sticky-top.sidebar ul li a[href='#" + elemId + "']").addClass("current");
 		}
 	  });
 	};
+
 	addClassOnScroll();
   }
   
@@ -139,7 +141,7 @@ function throttle(fn, wait) {
 		90; /* this value will varie in function of your page height*/
 	  $("ul .sideline").css("height", value + "%");
 	});
-	$("a.clickable").click(function () {
+	$("a.clickable").on("click",function () {
 	  $("a.current").removeClass("current");
 	  $(this).addClass("current");
 	});

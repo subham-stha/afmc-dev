@@ -1210,3 +1210,6 @@ ul .sideline {
   border-radius: 10px;
   left: 0;
 }
+.hero.blog{
+  height: 100vh;
+}

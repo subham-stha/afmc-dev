@@ -12,8 +12,8 @@ get_header();
    </div>
    <div class="mx-auto py-4"><img src="<?php echo get_template_directory_uri();?>/assets/img/mg.png" alt=""></div>
 	<div class="row">
-  <div class="col-4 col-md-5">
-    <div class="d-flex flex-column gap-2  text-left sticky-top sidebar d-none d-xl-block">
+  <div class="col-lg-4 col-md-5 d-none d-md-block">
+    <div class="d-flex flex-column gap-2  text-left sticky-top sidebar">
 	<ul>
 		<span class="sideline"></span>
 		<li><a class="p-1 rounded" href="#sec1" class="clickable">What Are Forensic Medical Coders?</a><li>

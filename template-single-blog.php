@@ -18,7 +18,7 @@ get_header();
 		<span class="sideline"></span>
 		<li><a class="p-1 rounded" href="#sec1" class="clickable">What Are Forensic Medical Coders?</a><li>
 		<li><a class="p-1 rounded" href="#sec2" class="clickable">A Unique Skillset</a></li>
-		<li><a class="p-1 rounded" href="#sec3" class="clickable">The Reole of Forensic Medical Coders</a></li>
+		<li><a class="p-1 rounded" href="#sec3" class="clickable">The Role of Forensic Medical Coders</a></li>
 		<li><a class="p-1 rounded" href="#sec4" class="clickable">The Importance of Accuracy</a></li>
 		<li><a class="p-1 rounded" href="#sec5" class="clickable">A Growing field</a></li>
 		<li><a class="p-1 rounded" href="#sec6" class="clickable">Conclusion</a></li>
@@ -33,7 +33,7 @@ get_header();
       <h4 id="sec2">A Unique Skillset</h4>
       <p>Forensic medical coders require a unique blend of skills. They must be proficient in standard coding systems like ICD-10, CPT, and HCPCS, but they also need a deep understanding of medical terminology, anatomy, and pathology. Furthermore, they must have a keen eye for detail and the ability to analyze complex information to draw meaningful conclusions.</p>
 	  <p>In addition to technical expertise, forensic medical coders must be excellent communicators. They often work with a variety of stakeholders, from attorneys to law enforcement officers, requiring them to translate complex medical information into layman's terms. This ability to bridge the gap between medical jargon and everyday language is crucial in forensic settings, where clarity and accuracy are paramount.</p>
-      <h4 id="sec3">The Reole of Forensic Medical Coders</h4>
+      <h4 id="sec3">The Role of Forensic Medical Coders</h4>
 	  <p>One of the primary roles of forensic medical coders is to assist in investigations related to insurance fraud, wrongful death, and other legal matters. They meticulously review medical records to identify discrepancies, inconsistencies, or potential evidence of malpractice or negligence. This process involves comparing medical documents against established coding standards and identifying any irregularities that could impact the outcome of an investigation or case.</p>
 		<p>Forensic medical coders are also instrumental in cases involving personal injury claims, where they help determine the extent of injuries and the corresponding medical expenses. Their analysis can significantly impact legal proceedings, often serving as the foundation for expert testimony or supporting evidence in court.</p>
       <h4 id="sec4">The Importance of Accuracy</h4>

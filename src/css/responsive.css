@@ -23,9 +23,7 @@
 .rm-articles h3 {
     font-size: 20px;
   }
-  .rm-articles .btn {
-    font-size: 20px;
-  }
+
 }
 
 /* Styles for devices with a max-width of 820px */
@@ -36,6 +34,9 @@
   .sticky-top.sidebar li a {
     font-size: 10px;
   }
+  .hero.blog{
+    height: 60vh;
+}
 }
 
 /* Styles for devices with a max-width of 991px */
@@ -44,7 +45,7 @@
     margin-top: 15px;
     font-size: 16px;
   }
-  .hero-section .latest-article p {
+  .hero.blog .latest-article p {
     font-size: 18px;
     line-height: 18px;
   }
@@ -55,7 +56,42 @@
   .latest-article p.text {
     font-size: 14px;
   }
-  .hero-section .btn {
+  .hero.blog .btn {
     font-size: 15px;
-  }
+}
+.hero.blog .img-holder .hero-content {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+}
+.hero .hero-content {
+    left: 0;
+}
+.hero.blog .hero-content h1 {
+    font-size: 30px;
+    line-height: 38px;
+    max-width: 80%;
+}
+.hero.blog .hero-content p {
+    font-size: 14px;
+    line-height: 25px;
+    max-width: 80%;
+}
+.hero.blog{
+    background-position: right!important;
+}
+}
+@media (max-width: 400px) {
+
+    .hero.blog .hero-content h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .hero.blog .hero-content p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .rm-articles .btn {
+        font-size: 13px;
+    }
 }

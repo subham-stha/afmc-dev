@@ -12,7 +12,8 @@ get_header();
             </div>
         </div>
         
-        <div class="container">
+    </section>
+    <div class="container">
         <div class="latest-article">
                 <div class="section-block">
                 <h2>Latest Article</h2>
@@ -75,7 +76,6 @@ get_header();
                 <button class="btn">Load More Articles</button>
             </div>
         </div>
-    </section>
 </div>
 </main><!-- #main -->
 <?php

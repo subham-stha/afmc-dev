@@ -57,5 +57,36 @@
   }
   .hero-section .btn {
     font-size: 15px;
-  }
+}
+.hero-section .img-holder .hero-content {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+}
+.hero-section .hero-content h1 {
+    font-size: 18px;
+    line-height: 20px;
+}
+.hero-section .hero-content p {
+    font-size: 12px;
+    line-height: 14px;
+}
+.hero-section .img-holder img{
+    height: 400px;
+}
+}
+@media (max-width: 400px) {
+    .hero-section .img-holder .hero-content {
+        position: absolute;
+        top: 55%;
+        left: 10%;
+    }
+    .hero-section .hero-content h1 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .hero-section .hero-content p {
+        font-size: 10px;
+        line-height: 14px;
+    }
 }

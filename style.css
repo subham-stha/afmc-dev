@@ -970,7 +970,9 @@ textarea {
   padding: 0;
   box-sizing: border-box;
 }
-body p, .btn{
+
+body p,
+.btn {
   font-weight: 400;
 }
 
@@ -999,7 +1001,6 @@ body p, .btn{
   line-height: 32px;
 }
 
-
 .title-block p {
   font-size: 13px;
   line-height: 13px;
@@ -1010,6 +1011,7 @@ body p, .btn{
 .title-block .btn {
   background: #dadada;
   color: #ffffff;
+  border: transparent;
   border-radius: 20px !important;
   padding: 10px 15px;
 }
@@ -1097,42 +1099,23 @@ header.blueBg {
 
 /* template-single-blog2 */
 
-.hero-section .img-holder {
+.hero-content {
   position: relative;
+  color: white;
+  padding: 20px;
+  top: 30%;
+  left: 12%;
 }
 
-.hero-section .img-holder::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #192a388c;
-}
-.hero-section .img-holder .hero-content {
-  position: absolute;
-  top: 40%;
-  left: 15%;
-}
-
-.hero-section .hero-content h1 {
-  font-size: 48px;
-  line-height: 62px;
-  color: #ffffff;
-}
-
-.hero-section .hero-content h1 span {
+.hero .hero-content h1 span {
   display: block;
 }
 
-.hero-section .hero-content p {
-  font-size: 16px;
+.hero .hero-content p {
   line-height: 22px;
-  color: #ffffff;
 }
 
-.hero-section .hero-content p span {
+.hero .hero-content p span {
   display: block;
 }
 

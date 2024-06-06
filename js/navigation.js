@@ -138,7 +138,7 @@ function throttle(fn, wait) {
 	  var win = $(window).height();
 	  var value =
 		(scroll / (doc - win)) *
-		90; /* this value will varie in function of your page height*/
+		80; /* this value will varie in function of your page height*/
 	  $("ul .sideline").css("height", value + "%");
 	});
 	$("a.clickable").on("click",function () {

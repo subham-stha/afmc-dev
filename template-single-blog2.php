@@ -14,6 +14,10 @@ get_header();
 </section>
 
     <div class="container">
+        </div>
+        
+    </section>
+    <div class="container">
         <div class="latest-article">
                 <div class="section-block">
                 <h2>Latest Article</h2>

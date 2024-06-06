@@ -45,8 +45,27 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script src="<?php echo get_template_directory_uri();?>/san.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></scrip>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    items:4,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true
+});
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+})
+});
 
 </body>
 </html>

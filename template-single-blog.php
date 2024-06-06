@@ -5,15 +5,15 @@ get_header();
 <main id="primary" class="site-main container">
 <div class="section-block"></div>
 <i class="bi bi-chevron-left"></i>Back
-   <div class="title-block e6">
+   <div class="title-block">
 	<button class='btn'>Informational</button>
 	<h1>The Importance of FMC's</h1>
 	<p>29 April 2024 <i class="bi bi-dot"></i> 08:02 AM</p>
    </div>
    <div class="mx-auto py-4"><img src="<?php echo get_template_directory_uri();?>/assets/img/mg.png" alt=""></div>
 	<div class="row">
-  <div class="col-lg-4 col-md-5 d-none d-md-block">
-    <div class="d-flex flex-column gap-2  text-left sticky-top sidebar">
+  <div class="col-4 col-md-5">
+    <div class="d-flex flex-column gap-2  text-left sticky-top sidebar d-none d-xl-block">
 	<ul>
 		<span class="sideline"></span>
 		<li><a class="p-1 rounded" href="#sec1" class="clickable">What Are Forensic Medical Coders?</a><li>
@@ -45,6 +45,20 @@ get_header();
     </div>
   </div>
 </div>
+
+
+<h1>Owl Carousel</h1>
+<div class="owl-carousel">
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+  </div>
+
+
   <div class="articles">
 	<h2>Recommended Articles</h2>
 	<div class="row">
@@ -77,6 +91,7 @@ get_header();
 		</div>
 	</div>
   </div>
+        
 </main><!-- #main -->
 <?php
 get_sidebar();

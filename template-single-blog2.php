@@ -3,16 +3,17 @@
 get_header();
 ?>
 <main id="primary" class="site-main">
-    <section class="hero-section">
-        <div class="img-holder">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/banner.png" alt="" class="img-fluid">
-            <div class="hero-content d-none d-sm-block">
-                <h1>Insights, work approaches, <span>ideas. Read it all.</span></h1>
+
+    <section class="hero">
+    <div style="background: linear-gradient(180deg, #192a388c, #192a388c), url('<?php echo get_template_directory_uri(); ?>/assets/img/banner.png') no-repeat top center; background-size: cover; height: 100vh;">
+    <div class="hero-content d-sm-block">
+                <h1>Insights, work approaches, ideas.<span> Read it all.</span></h1>
                 <p>The <strong>AFMC Blog</strong> contains insightful articles aiming to educate people on the usefulness <span>of forensic medical coders.</span> </p>
             </div>
-        </div>
-        
-        <div class="container">
+    </div>
+</section>
+
+    <div class="container">
         <div class="latest-article">
                 <div class="section-block">
                 <h2>Latest Article</h2>
@@ -75,7 +76,6 @@ get_header();
                 <button class="btn">Load More Articles</button>
             </div>
         </div>
-    </section>
 </div>
 </main><!-- #main -->
 <?php

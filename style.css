@@ -1195,6 +1195,7 @@ html {
   width: 100%;
   font-weight: 400;
   letter-spacing: 1px;
+  outline:none;
 }
 
 .sticky-top.sidebar ul li a:hover {

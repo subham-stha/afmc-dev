@@ -113,13 +113,11 @@ function throttle(fn, wait) {
   function scroll_cb() {
 	var scroll = jQuery(window).scrollTop();
 	var addClassOnScroll = function () {
-		console.log('add on scroll is working')
-	  var windowTop = jQuery(window).scrollTop();
+		var windowTop = jQuery(window).scrollTop();
 	  jQuery(".scrollspy-example h4[id]").each(function (index, elem) {
 		var offsetTop = jQuery(elem).offset().top;
 		var outerHeight = jQuery(this).outerHeight(true);
-  
-		if (windowTop > offsetTop - 20 && windowTop < offsetTop + outerHeight) {
+		if (windowTop > offsetTop - 100) {
 		  var elemId = jQuery(elem).attr("id");
 		  jQuery(".sticky-top.sidebar ul li a.current").removeClass("current");
 		  jQuery(".sticky-top.sidebar ul li a[href='#" + elemId + "']").addClass("current");
@@ -141,7 +139,11 @@ function throttle(fn, wait) {
 		80; /* this value will varie in function of your page height*/
 	  $("ul .sideline").css("height", value + "%");
 	});
-	$("a.clickable").on("click",function () {
+	$("a.clickable").click(function () {
+		console.log("clicked");
+		// alert(document.querySelector('a').href);
+		// const element = document.getElementById("sec4");
+		// element.scrollIntoView();
 	  $("a.current").removeClass("current");
 	  $(this).addClass("current");
 	});

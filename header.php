@@ -27,17 +27,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/src/css/responsive.css">
 	<?php wp_head(); ?>
-	
 </head>
 
 <body <?php body_class(); ?>>
@@ -119,46 +110,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							)
 						);
 						?>
+						
 					</nav><!-- #site-navigation -->
 
 					<div class="mobile__signIn">
-						<div>
-							
-							<?php 
+						<?php 
+							if ( is_user_logged_in() ) {
 							$link = get_field('link_sing_up', 'options');
 							if( $link ): 
 								$link_url = $link['url'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
 								?>
 								<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-								<?php
-								if ( is_user_logged_in() ) {
-									echo get_field('title_my_account_link', 'options');
-								} if ( ! is_user_logged_in() ) {
-									$field_value = get_field('title_sing_up_link', 'options');
-									echo $field_value;
-								}
-
-								?>
+								<?php echo get_field('title_my_account_link', 'options');?>
 								</a>
-							<?php endif; ?>
-
-						</div>
-						<?php 
-						$link = get_field('login_mobile_menu', 'options');
-						if( $link ): 
-							$link_url = $link['url'];
-							$link_title = $link['title'];
-							$link_target = $link['target'] ? $link['target'] : '_self';
-							?>
-							<a class="link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-						<?php endif; ?>
+								<?php
+								endif; 
+								}else{
+								?>
+								<a class="link" href="<?php echo get_home_url().'/login'; ?>">Login
+								</a>
+								<a class="link" href="<?php echo get_home_url().'/signup'; ?>">Register
+								</a>
+								
+								<?php }?>
+						
 					</div>
 				</div>
 			</div>
 			
 			<div class="header__signHamburguer">
 				<div class="header__signIn">
+					
 					<figure class="icon icon-white">
 						<?php if ( get_field('icon_sing_up', 'options') ) : $image = get_field('icon_sing_up', 'options'); ?>
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
@@ -191,6 +174,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</a>
 					
 					<?php 
+					if ( is_user_logged_in() ) {
 					$link = get_field('link_sing_up', 'options');
 					if( $link ): 
 						$link_url = $link['url'];
@@ -198,18 +182,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						$link_target = $link['target'] ? $link['target'] : '_self';
 						?>
 						<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-						<?php
-						if ( is_user_logged_in() ) {
-							echo get_field('title_my_account_link', 'options');
-						} if ( ! is_user_logged_in() ) {
-							$field_value = get_field('title_sing_up_link', 'options');
-							echo $field_value;
-						}
-
-						?>
+						<?php echo get_field('title_my_account_link', 'options');?>
 						
 						</a>
-					<?php endif; ?>
+					<?php
+					 endif; 
+					 }else{
+					?>
+					<a class="button" href="<?php echo get_home_url().'/login'; ?>">Login
+					</a>
+					<a class="button" href="<?php echo get_home_url().'/signup'; ?>">Register
+					</a>
+					
+					<?php }?>
 				</div>
 
 				<button class="header__hamburger js-hamburger">
@@ -222,10 +207,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 			
 		</div>
-
-	
-		
-		
-
-		
-	</header><!-- #masthead -->
+</header><!-- #masthead -->

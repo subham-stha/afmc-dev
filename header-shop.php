@@ -125,7 +125,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									?>
 								</a>
 							<?php endif; ?>
-
+							<?php if ( ! is_user_logged_in() ) { ?>
+								<a class="button" href="<?php echo get_home_url().'/signup'; ?>">Register
+								</a>
+							<?php }?>
 						</div>
 						<?php 
 						$link = get_field('login_mobile_menu', 'options');
@@ -192,6 +195,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						
 						</a>
 					<?php endif; ?>
+					<?php if ( ! is_user_logged_in() ) { ?>
+					<a class="button" href="<?php echo get_home_url().'/signup'; ?>">Register
+					</a>
+					<?php }?>
 				</div>
 
 				<button class="header__hamburger js-hamburger">
@@ -201,8 +208,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</span>
 				</button>
 			</div>
-
-			
-		</div>
-
-	</header><!-- #masthead -->
+</div>
+</header><!-- #masthead -->

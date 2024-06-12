@@ -16,12 +16,12 @@ get_header();
     <div class="d-flex flex-column gap-2  text-left sticky-top sidebar">
 	<ul>
 		<span class="sideline"></span>
-		<li><a class="p-1 rounded" href="#sec1" class="clickable">What Are Forensic Medical Coders?</a><li>
-		<li><a class="p-1 rounded" href="#sec2" class="clickable">A Unique Skillset</a></li>
-		<li><a class="p-1 rounded" href="#sec3" class="clickable">The Role of Forensic Medical Coders</a></li>
-		<li><a class="p-1 rounded" href="#sec4" class="clickable">The Importance of Accuracy</a></li>
-		<li><a class="p-1 rounded" href="#sec5" class="clickable">A Growing field</a></li>
-		<li><a class="p-1 rounded" href="#sec6" class="clickable">Conclusion</a></li>
+		<li><a class="p-1 rounded clickable" href="#sec1">What Are Forensic Medical Coders?</a><li>
+		<li><a class="p-1 rounded clickable" href="#sec2">A Unique Skillset</a></li>
+		<li><a class="p-1 rounded clickable" href="#sec3">The Role of Forensic Medical Coders</a></li>
+		<li><a class="p-1 rounded clickable" href="#sec4">The Importance of Accuracy</a></li>
+		<li><a class="p-1 rounded clickable" href="#sec5">A Growing field</a></li>
+		<li><a class="p-1 rounded clickable" href="#sec6">Conclusion</a></li>
 	</ul>
 	</div>
   </div>

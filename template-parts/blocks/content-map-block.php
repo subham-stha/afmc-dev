@@ -185,20 +185,26 @@
                             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
                             <?php 
+                                
                                 $member_id = get_the_ID();
-                                $userMembership = get_post_meta($member_id, 'af_member_plan', true);
-                                $cvState= get_post_meta($member_id, 'cv_network_state', true);
+                                $userMembership = get_post_meta($member_id, 'af_member_plan', true);//getting membership plan id
+                                $cvStateF= get_post_meta($member_id, 'cv_network_state', true);
+                                $cvStateA= get_post_meta($member_id, 'network_map_state', true);
                                 $cvPDF= get_post_meta($member_id, 'cv_network_pdf', true);
+                                if($cvStateA){//get user info by state
+                                    $userID = get_post_meta($member_id, 'afwum_member_user',true);
+                                    $user_info = get_userdata($userID);
+                                }
                             ?>
-                            
-                                <?php if ( $userMembership == 716 ) : ?>
-                                    <li class="js-stateResult" data-tag="[<?php echo $cvState; ?>]" data-state="<?php echo $cvState; ?>" data-pdf="<?php echo $cvPDF; ?>" data-plan="<?php echo $userMembership;?>" data-id="<?php echo $member_id; ?>">
+                                <?php if ( ($userMembership == 716) || current_user_can('administrator')):?>
+                                    
+                                    <li class="js-stateResult" data-tag="[<?php echo $cvStateA; ?>]" data-state="<?php echo $cvStateA; ?>" data-pdf="<?php echo $cvPDF; ?>" data-plan="<?php echo $userMembership;?>" data-id="<?php echo $member_id; ?>">
                                         <div class="item-content">
-                                        <p><?php the_title(); ?></p>
-                                            <div class="links">
-                                                <a class="lightbox-cta js-lightbox" href="#cta-lightbox"><img src="<?php echo get_template_directory_uri(); ?>/src/assets/eye-icon.svg" alt="" /> </a>
-                                                <a href="<?php echo $cvPDF; ?>" download class="download"><img src="<?php echo get_template_directory_uri(); ?>/src/assets/download-icon.svg" alt="" /> </a>
-                                            </div> 
+                                        <p><?php the_title(); ?><span><a href="mailto:<?php echo $user_info->user_email;?>"><?php echo $user_info->user_email;?></a></span></p>
+                                         <!-- <div class="links">
+                                                <a class="lightbox-cta js-lightbox" href="#cta-lightbox"><img src="<?php //echo get_template_directory_uri(); ?>/src/assets/eye-icon.svg" alt="" /> </a>
+                                                <a href="<?php //echo $cvPDF; ?>" download class="download"><img src="<?php //echo get_template_directory_uri(); ?>/src/assets/download-icon.svg" alt="" /> </a>
+                                            </div>  -->
                                              <!-- <div id="cta-lightbox" class="lightbox">
 
                                                 <div class="lightbox__container">
@@ -211,8 +217,8 @@
 
                                                     <div class="lightbox__content">
 
-                                                        <object data="<?php echo $cvPDF; ?>" type="application/pdf" width="90%" height="80%">
-                                                        <p>Unable to display PDF file. <a href="<?php echo $cvPDF; ?>">Download</a> instead.</p>
+                                                        <object data="<?php //echo $cvPDF; ?>" type="application/pdf" width="90%" height="80%">
+                                                        <p>Unable to display PDF file. <a href="<?php //echo $cvPDF; ?>">Download</a> instead.</p>
                                                         </object>
                                                     </div>
 
@@ -238,7 +244,7 @@
     </div>
 </section>
 
-<!-- lightbox -->
+<!-- lightbox 
 <section id="cta-lightbox" class="lightbox">
 
     <div class="lightbox__container">
@@ -251,12 +257,12 @@
 
         <div class="lightbox__content">
 
-        <object data="<?php echo $cvPDF; ?>" type="application/pdf" width="100%" height="500px">
-      <p>Unable to display PDF file. <a href="<?php echo $cvPDF; ?>">Download</a> instead.</p>
+        <object data="<?php //echo $cvPDF; ?>" type="application/pdf" width="100%" height="500px">
+      <p>Unable to display PDF file. <a href="<?php //echo $cvPDF; ?>">Download</a> instead.</p>
     </object>
         </div>
 
     </div>
 
-</section>
+</section>-->
 

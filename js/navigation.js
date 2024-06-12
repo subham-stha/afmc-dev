@@ -142,8 +142,8 @@ function throttle(fn, wait) {
 	$("a.clickable").click(function () {
 		console.log("clicked");
 		// alert(document.querySelector('a').href);
-		// const element = document.getElementById("sec4");
-		// element.scrollIntoView();
+		const element = document.getElementById("sec4");
+		element.scrollIntoView() + 100;
 	  $("a.current").removeClass("current");
 	  $(this).addClass("current");
 	});

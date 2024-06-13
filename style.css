@@ -1214,3 +1214,14 @@ ul .sideline {
 .hero.blog{
   height: 100vh;
 }
+
+/* Network map page csss */
+
+.item-content.map-data p span{
+  margin-left: 5px;
+  border-left: solid 1px;
+  padding-left: 5px;
+}
+.item-content.map-data p span a{
+  text-decoration: none;
+}

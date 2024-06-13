@@ -200,7 +200,7 @@
                                 <?php if ( ($userMembership == 716) || current_user_can('administrator')):?>
                                    <?php if($isMapActive == 1):?>
                                     <li class="js-stateResult" data-tag="[<?php echo $cvStateA; ?>]" data-state="<?php echo $cvStateA; ?>" data-pdf="<?php echo $cvPDF; ?>" data-plan="<?php echo $userMembership;?>" data-id="<?php echo $member_id; ?>">
-                                        <div class="item-content">
+                                        <div class="item-content map-data">
                                         <p><?php the_title(); ?><span><a href="mailto:<?php echo $user_info->user_email;?>"><?php echo $user_info->user_email;?></a></span></p>
                                          <!-- <div class="links">
                                                 <a class="lightbox-cta js-lightbox" href="#cta-lightbox"><img src="<?php //echo get_template_directory_uri(); ?>/src/assets/eye-icon.svg" alt="" /> </a>

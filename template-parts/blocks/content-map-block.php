@@ -191,13 +191,14 @@
                                 $cvStateF= get_post_meta($member_id, 'cv_network_state', true);
                                 $cvStateA= get_post_meta($member_id, 'network_map_state', true);
                                 $cvPDF= get_post_meta($member_id, 'cv_network_pdf', true);
+                                $isMapActive = get_post_meta($member_id, 'active_map_view_for_this_member', true);
                                 if($cvStateA){//get user info by state
                                     $userID = get_post_meta($member_id, 'afwum_member_user',true);
                                     $user_info = get_userdata($userID);
                                 }
                             ?>
                                 <?php if ( ($userMembership == 716) || current_user_can('administrator')):?>
-                                    
+                                   <?php if($isMapActive == 1):?>
                                     <li class="js-stateResult" data-tag="[<?php echo $cvStateA; ?>]" data-state="<?php echo $cvStateA; ?>" data-pdf="<?php echo $cvPDF; ?>" data-plan="<?php echo $userMembership;?>" data-id="<?php echo $member_id; ?>">
                                         <div class="item-content">
                                         <p><?php the_title(); ?><span><a href="mailto:<?php echo $user_info->user_email;?>"><?php echo $user_info->user_email;?></a></span></p>
@@ -227,7 +228,7 @@
                                             </div> -->
                                         </div>  
                                     </li>
-
+                                    <?php endif; ?>
                                    
                                 <?php endif; ?>
 

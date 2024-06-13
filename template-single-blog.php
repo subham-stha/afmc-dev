@@ -45,21 +45,7 @@ get_header();
     </div>
   </div>
 </div>
-
-
-<h1>Owl Carousel</h1>
-<div class="owl-carousel">
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-  </div>
-
-
-  <div class="articles">
+<div class="articles">
 	<h2>Recommended Articles</h2>
 	<div class="row">
 		<div class="col-sm-12 col-md-6 col-lg-4">

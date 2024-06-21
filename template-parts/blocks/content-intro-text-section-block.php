@@ -32,10 +32,10 @@
 <?php endif; ?>
 
 <section class="introSection custom-paddings" style="
---data-pt-desktop: <?php echo $top;?>px;
---data-pb-desktop: <?php echo $bottom;?>px;
---data-pt-mobile: <?php echo $mobileTop; ?>px;
---data-pb-mobile: <?php echo $mobileBottom; ?>px;">
+--data-pt-desktop: <?php if(isset($top)){echo $top;}?>px;
+--data-pb-desktop: <?php if(isset($bottom)){echo $bottom;}?>px;
+--data-pt-mobile: <?php if(isset($mobileTop)){echo $mobileTop;}?>px;
+--data-pb-mobile: <?php if(isset($mobileBottom)){echo $mobileBottom;}?>px;">
     <div class="container">
         <div class="introSection__content js-titleAnimation js-fadeUpAnimation">
             <?php if ( get_field('subtitle') ) : ?>

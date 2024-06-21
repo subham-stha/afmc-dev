@@ -537,9 +537,9 @@ a {
   color: #4169e1;
 }
 
-a:visited {
+/* a:visited {
   color: #800080;
-}
+} */
 
 a:hover,
 a:focus,
@@ -1214,7 +1214,12 @@ ul .sideline {
 .hero.blog{
   height: 100vh;
 }
-
+.btn-blueMedium:focus, .btn-blueMedium:hover{
+  color:#fff;
+}
+li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--orders {
+  display: none;
+}
 /* Network map page csss */
 
 .item-content.map-data p span{

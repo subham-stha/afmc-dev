@@ -288,7 +288,9 @@ function custom_user_cv_network_tab( $tabs ) {
 	$userMembership = get_post_meta($member_id, 'af_member_plan', true);
 
 	if ($userMembership == 716 ) {
-		$tabs['cv_network'] = __( 'Network Map', 'custom-user-cv-network' );
+		// $tabs['cv_network'] = __( 'Network Map', 'custom-user-cv-network' );
+		$tabs = array_slice( $tabs, 0, 7, true ) + array( 'cv_network' => 'Network Map' )
+		+ array_slice( $tabs, 7, NULL, true );
 	}
 	
 	return $tabs;

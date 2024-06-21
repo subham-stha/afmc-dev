@@ -254,7 +254,7 @@ class Animations {
           stagger: 0.01,
         });
       });
-
+      if (!window.matchMedia('(max-width: 767px)').matches) {
       animText.forEach(el => {
         let splitEl = new SplitText(el, {type: "lines,words", linesClass:"animText-words"});
         let splitTl = gsap.timeline({duration: .35, ease: 'power4', 
@@ -271,6 +271,7 @@ class Animations {
           // stagger: 0.02,
         });
       });
+    }
     }
     if (this.imageAnim.length > 0) {
 

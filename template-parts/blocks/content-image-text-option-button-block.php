@@ -49,7 +49,7 @@
                       </figure>
                   </div>
               </div>
-              <div class="col-12 col-md-5">
+              <div class="col-12 col-md-5 col-sm-12">
                   <div class="imageTitleText__text js-titleAnimation">
                     <?php if ( get_field('title_principal_section') ) : ?>
                         <h2 class="heading medium animTitleSm"><?php echo get_field('title_principal_section'); ?></h2>
